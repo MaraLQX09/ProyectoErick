@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<title>Horario</title>
+	<title>Escuela de Taekwondo </title>
 	<style>
 		body {
 			margin: 0;
@@ -24,33 +24,24 @@
 			margin: 0 auto;
 			padding: 20px;
 		}
-		table {
-			width: 100%;
-			border-collapse: collapse;
-		}
-		th, td {
-			padding: 10px;
+		.info-box {
+			background-color: #fff;
 			border: 1px solid #ddd;
-			text-align: left;
+			padding: 20px;
+			margin-bottom: 20px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 		}
-		th {
-			background-color: #333;
-			color: #fff;
-			font-weight: normal;
+		.info-box h2 {
+			margin-top: 0;
 		}
-		tr:nth-child(even) {
-			background-color: #f2f2f2;
-		}
-		.time-slot {
-			font-weight: bold;
-			text-align: center;
-			background-color: #ddd;
+		.info-box p {
+			margin-bottom: 0;
 		}
 	</style>
 </head>
 <body>
 	<header>
-		<h1>Horario</h1>
+		<h1>Escuela de Taekwondo</h1>
 	</header>
 	<!--Navbar-->
 	<nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -89,57 +80,37 @@
 		  </div>
 		</div>
 	  </nav>
-	<div class="container">
-		<table>
-			<thead>
-				<tr>
-					<th></th>
-					<th>Lunes</th>
-					<th>Martes</th>
-					<th>Miercoles</th>
-					<th>Jueves</th>
-					<th>Viernes</th>
-				</tr>
-			</thead>
-				<tr>
-					<td class="time-slot">9:00 AM - 11:00 AM</td>
-					<td>Entrenamiento de niños</td>
-					<td>Entrenamiento de Jovenes</td>
-					<td>Entrenamiento de adultos</td>
-					<td>Entrenamiento grupal</td>
-					<td>Entrenamiento grupal</td>
-				</tr>
-				<tr>
-					<td class="time-slot">12:00 HRS - 14:00 HRS</td>
-					<td>Entrenamiento de niños</td>
-					<td>Entrenamiento de Jovenes</td>
-					<td>Entrenamiento de adultos</td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td class="time-slot">15:00 HRS - 17:00 HRS</td>
-					<td>Entrenamiento de niños</td>
-					<td>Entrenamiento de Jovenes</td>
-					<td>Entrenamiento de adultos</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-        </table>
-    </div>
-	<h3>No olvides traer tu material para los entrenamientos, aqui te dejamos un listado de lo que necesitaras 
-		a lo largo del tiempo en tus clases de taekwondo.</h3>
-
-		<h5><mark>1. Agua y toalla <br> <br>
-			2. Dobok <br> <br>
-			3. Protector corporal <br> <br>
-			4. Guantes, espinilleras y cinturones
-		</h5></mark> 
-		<img src="img/botella.png" alt="botella de agua" height="200px">
-		<img src="img/dobok.jpeg" alt="dobok" height="200px">
-		<img src="img/peto.jpeg" alt="Peto de entrenamiento" height="200px">
-		<img src="img/guantes.jpeg" alt="Guantes" height="200px">
-		<img src="img/espinilleras.jpeg" alt="espinilleras" height="200px">
-		<img src="img/cinturon.jpeg" alt="cinturon de color" height="200px"> <br>
+      <form class="row g-3">
+        <div class="col-12">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="ejemplo@dominio.com">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Dirección</label>
+          <input type="text" class="form-control" id="direccion" placeholder="Av. Principal 123">
+        </div>
+        <div class="col-md-6">
+          <label for="inputAddress2" class="form-label">Nombre completo</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Marco Antonio Romero Andrade" onkeypress="return permite(event, 'car')">
+        </div>
+        <div class="col-md-6">
+          <label for="inputAddress2" class="form-label">Teléfono</label>
+          <input type="text" class="form-control" id="telefono" placeholder="2721234567" onkeypress="return permite(event, 'num')">
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">Curso</label>
+          <select id="curso" class="form-select">
+            <option value="0">Selecciona el tipo de entrenamiento</option>
+            <option>Entrenamiento de niños</option>
+            <option>Entrenamiento de jóvenes</option>
+            <option>Entrenamiento de adultos</option>
+            <option>Entrenamiento grupal</option>
+          </select>
+        </div>
+        <div>
+          <button type="submit" class="myboton" onclick="funcion()">Registrarse</button>
+        </div>
+      </form>
+      <script src="js/funcion.js"></script>
 </body>
 </html>
